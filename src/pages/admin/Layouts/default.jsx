@@ -121,7 +121,7 @@ export const LayoutDefault = () => {
 							mode="inline"
 							theme="dark"
 							items={items}
-							defaultSelectedKeys={[entityName.trim()]}
+							defaultSelectedKeys={[entityName?.trim()]}
 							defaultOpenKeys={[url.trim()]}
 						/>
 					</Sider>

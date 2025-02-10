@@ -17,3 +17,7 @@ export const getTopUserHighScore = async (testId, maxTop = 3) => {
 export const getTestDetailByTestId = async (testId) => {
 	return await api.get(`/test-detail/tests/${testId}`);
 }
+
+export const getMyTestDetail = async () => {
+	return await api.get(`/test-detail/my-tests`);
+}

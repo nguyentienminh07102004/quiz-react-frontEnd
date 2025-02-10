@@ -20,6 +20,7 @@ import { Login } from "./pages/login/index.jsx";
 import { Register } from "./pages/register/index.jsx";
 import { Page403 } from "./pages/Result/403.jsx";
 import Page404 from "./pages/Result/404.jsx";
+import { TestDetailList } from "./pages/client/ResultClient/TestDetailList/index.jsx";
 
 function App() {
 	return (
@@ -50,6 +51,7 @@ function App() {
 					<Route index path="/" element={<ContentClient />} />
 					<Route path="tests/detail/:id" element={<TestDetail />} />
 					<Route path="test/" element={<TestClient />} />
+					<Route path="test/details/" element={<TestDetailList />} />
 					<Route path="result/:id" element={<Result />} />
 				</Route>
 				<Route path="*" element={<Page404 />} />

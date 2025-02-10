@@ -1,10 +1,13 @@
-import { Button, Descriptions, Modal } from "antd";
+import { Button, DatePicker, Descriptions, Modal } from "antd";
 import React from "react";
 import { FaBookOpen } from "react-icons/fa6";
+import dayjs from "dayjs";
 
 export const DetailUser = (props) => {
 	const { user } = props;
 	const [open, setOpen] = React.useState(false);
+	console.log(user);
+	console.log(dayjs(user.dateOfBirth));
 	const items = [
 		{
 			label: "Họ và tên",
@@ -16,7 +19,7 @@ export const DetailUser = (props) => {
 		},
 		{
 			label: "Ngày tháng năm sinh",
-			children: user.dateOfBirth,
+			children: <DatePicker value={user.dateOfBirth} disabled />,
 			span: {
 				sm: 24,
 				xs: 24

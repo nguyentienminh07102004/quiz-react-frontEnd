@@ -1,4 +1,4 @@
-import { Layout } from "antd";
+import { Button, Layout } from "antd";
 import { Content, Header } from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
 import React from "react";
@@ -18,12 +18,14 @@ export const LayoutDefaultClient = () => {
 				>
 					<img
 						src={Logo}
-						height={80}
+						height="100%"
 						className="cursor-pointer"
 						onClick={() => nav("/")}
 					/>
-
-					<UserInfo />
+					<div className="flex items-center justify-evenly">
+						<Button className="me-3" onClick={() => nav("/test/details")}>Lịch sử bài thi</Button>
+						<UserInfo />
+					</div>
 				</Header>
 				<Layout>
 					<Sider breakpoint="md" collapsedWidth={0}>

@@ -15,7 +15,7 @@ export const Result = () => {
 	const [questionList, setQuestionList] = React.useState([]);
 	const [testDetail, setTestDetail] = React.useState({});
 	const RestartTest = async () => {
-		nav(`/test-detail/${testDetail.test.id}`);
+		nav(`/tests/detail/${testDetail.test.id}`);
 	};
 	const BackToHome = () => {
 		nav("/");
@@ -60,13 +60,13 @@ export const Result = () => {
 			})}
 			<div className="flex justify-evenly mt-4">
 				<div
-					className="ps-5 pe-5 pt-2 pb-2 rounded fs-6 bg-primary"
+					className="ps-5 pe-5 pt-2 pb-2 rounded fs-6 bg-primary cursor-pointer"
 					onClick={RestartTest}
 				>
 					Làm lại
 				</div>
 				<div
-					className="ps-5 pe-5 pt-2 pb-2 rounded fs-6 bg-primary"
+					className="ps-5 pe-5 pt-2 pb-2 rounded fs-6 bg-primary cursor-pointer"
 					onClick={BackToHome}
 				>
 					Trang chủ
